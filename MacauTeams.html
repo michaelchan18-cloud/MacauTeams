@@ -1,176 +1,177 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orange Header Example</title>
+    <title>Honorable Judges</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
         body {
-            background-color: #f5f5f5;
-            color: #333;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th {
+            padding: 10px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            width: 20%; /* Equal width for all tabs */
+            transition: opacity 0.3s;
+        }
+        th.blue {
+            background-color: #003366; /* Dark Blue */
+        }
+        th.green {
+            background-color: #005f00; /* Dark Green */
+        }
+        th.orange {
+            background-color: #FF8C00; /* Dark Orange */
+        }
+        th.purple {
+            background-color: #800080; /* Dark Purple */
+        }
+        th.red {
+            background-color: #8B0000; /* Dark Red */
+        }
+        td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            display: none; /* Initially hide all details */
+            text-align: left;
+            width: 100%; /* Full width for biography */
+        }
+        .active {
+            display: table-cell; /* Show only active content */
+        }
+        .dimmed {
+            opacity: 0.5; /* Dimmed effect */
+        }
+        h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.2em;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        /* Style for Chinese bio list */
+        td ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        td p {
+            margin: 10px 0;
             line-height: 1.6;
         }
-        
-        .header {
-            background-color: #ff8c00; /* Orange color */
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 25px;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #ffe4b3;
-        }
-        
-        .main-content {
-            padding: 40px 0;
-        }
-        
-        .hero {
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-        }
-        
-        .hero h1 {
-            color: #ff8c00;
-            margin-bottom: 15px;
-        }
-        
-        .content-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .card {
-            background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .card h3 {
-            color: #ff8c00;
-            margin-bottom: 15px;
-        }
-        
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .nav-links {
-                margin-top: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .nav-links li {
-                margin: 8px;
-            }
+        /* Add slight separation between Chinese and English content */
+        .lang-separator {
+            margin: 15px 0;
+            border-bottom: 1px solid #eee;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">OrangeBrand</div>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+
+<h1>Honorable Judges of Chinese Mainland, Hong Kong, and Macao Enterprises Business Case Analysis Competition 2025</h1>
+<table id="judgesTable">
+    <thead>
+        <tr>
+            <th class="blue" onclick="showContent('aaron', this)">Aaron Hui</th>
+            <th class="green" onclick="showContent('ben', this)">Ben Kwok</th>
+            <th class="orange" onclick="showContent('johnson', this)">Johnson Lo</th>
+            <th class="purple" onclick="showContent('kay', this)">Kay Tai</th>
+            <th class="red" onclick="showContent('patrick', this)">Patrick S. Lee</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="aaron" class="active">
+                <h3>Aaron Hui 許漢忠</h3>
+                <!-- Chinese Bio -->
+                <p>許漢忠先生畢業於密德薩斯大學，在技術應用和銷售及業務拓展方面擁有豐富的經驗。他曾在微軟、Nintex、AgilePoint以及不同類型的企業和資訊科技顧問公司工作。他成功幫助本地中小企業和全球財富500強的客戶解決業務關鍵問題。</p>
+                <p>許先生曾任教香港中文大學－東華書院、嶺南大學持續進修學院，主要教授科技相關的學科，學生為不同領域的在職人士。</p>
+                <p>他的研究興趣是數字化轉型、流程自動化、低代碼/無代碼平台以及公民開發策略與實踐。他在上述領域擁有二十年的實踐經驗。許先生也是國際微軟合作夥伴協會大中華區的代表。</p>
+                <p>十多年來，他致力支持本地和國際非牟利機構。以下是其中一部分：</p>
+                <ul>
+                    <li>智慧香港扶輪社 - 創會會員</li>
+                    <li>和富領袖網絡 - 分會顧問召集人</li>
+                    <li>青年成就香港部 - 商界義工</li>
+                    <li>香港青少年服務處 - 伴我創Teen才培育計劃 - 義務導師</li>
+                    <li>香港專上學院 - 商界導師</li>
+                    <li>香港大學專業進修學院 - 校友會委員義務秘書</li>
                 </ul>
-            </div>
-        </div>
-    </header>
-    
-    <main class="main-content">
-        <div class="container">
-            <section class="hero">
-                <h1>Welcome to Our Website</h1>
-                <p>This is an example of a webpage with an orange header. The vibrant orange color creates a warm and energetic feel that captures attention while maintaining a professional appearance.</p>
-            </section>
-            
-            <section class="content-section">
-                <div class="card">
-                    <h3>Our Services</h3>
-                    <p>We offer a wide range of services designed to help your business grow and succeed in today's competitive market.</p>
-                </div>
                 
-                <div class="card">
-                    <h3>Our Mission</h3>
-                    <p>Our mission is to provide exceptional value to our clients through innovative solutions and outstanding customer service.</p>
-                </div>
-                
-                <div class="card">
-                    <h3>Why Choose Us</h3>
-                    <p>With years of experience and a dedicated team of professionals, we deliver results that exceed expectations.</p>
-                </div>
-            </section>
-        </div>
-    </main>
-    
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2023 OrangeBrand. All rights reserved.</p>
-        </div>
-    </footer>
+                <!-- Separator between Chinese and English -->
+                <div class="lang-separator"></div>
+
+                <!-- Original English Bio -->
+                <p>Aaron Hui graduated from Middlesex University and specializes in technical solutions, sales, and business development. He has worked at major companies, including Microsoft, and has over 20 years of experience in digital transformation and process automation.</p>
+                <p>Mr. Hui is committed to supporting local and international nonprofit organizations. He serves as a mentor for various programs and is actively involved in initiatives that empower youth and communities in Hong Kong.</p>
+                <p>His research interests include low-code/no-code platforms and citizen development strategies, contributing to a more digital and inclusive future for businesses.</p>
+            </td>
+            <td id="ben">
+                <h3>Ben Kwok</h3>
+                <p>Dr. Ben Kwok is a Training and Education Advisor at the Vocational Training Council. He has received the "Staff Excellent Award" for his contributions, providing valuable learning opportunities related to the Greater Bay Area.</p>
+                <p>Dr. Kwok is highly respected for his professionalism and care for students. He invests extra time into arranging extracurricular activities, such as seminars and competitions, to enhance students' professional knowledge and skills.</p>
+                <p>Alongside his work in education, he is active in various community organizations, contributing to youth development and public service initiatives.</p>
+            </td>
+            <td id="johnson">
+                <h3>Johnson Lo</h3>
+                <p>Johnson Lo is the Chairman of Chartered Institue of Marketing Hong Kong Chapter, Vice Chairman of International Food Safety Association, with over 20 years of experience in developing the Asia-Pacific market. He holds a Master's degree from the University of Leicester, UK, and is certified as a Sustainability Manager and Chartered Marketer.</p>
+                <p>Previously, he served as a regional senior executive at SHI International Inc., helping to build Asia Pacific region with Fortune 500 companies customer. Since 2011, Mr. Lo started his entrepreneur journey by founding Sprouts Concepts International provide intellectual property licensing services, franchising, and brand security management services.  And from 2018, Mr Lo found another start up KOLB LIFE, a social enterprise in Hong Kong that involves catering and retailing services.</p>
+                <p>Mr. Lo is deeply involved in community service, assisting social enterprises in implementing innovative solutions to address poverty and social exclusion in Hong Kong. He is also a visiting lecturer at The Hong Kong Polytechnic University, College of Professional and Continuing Education and a columnist of cpjobs.com.</p>
+            </td>
+            <td id="kay">
+                <h3>Kay Tai</h3>
+                <p>Kay Tai is an Associate Principal Consultant at the Hong Kong Productivity Council. As a passionate advocate for social innovation, he thrives on empowering entrepreneurs to create real-world impact.</p>
+                <p>With extensive experience in program management, design thinking, and lean startup methodologies, he excels at developing and implementing strategies that drive positive change. He has spearheaded numerous social entrepreneurship programs, providing comprehensive support through seed funding, training, and mentorship.</p>
+            </td>
+            <td id="patrick">
+                <h3>Patrick S. Lee</h3>
+                <p>Patrick S. Lee is a seasoned business leader and innovation advocate with more than 30 years of experience in multinational management, marketing, and technology venture building. His expertise spans renewable energy, smart city solutions, green technology, location-based services, and fintech.</p>
+                <p>Mr. Lee is the co-founder or senior executive of several technology and green-tech ventures, including Rabbit Energy and Asia Carbon Neutral. He also serves as a strategic advisor to companies such as Wizpresso and EPRO Advance Technology, contributing to the commercialization and regional adoption of innovative technologies.</p>
+                <p>Prior to entering the innovation and technology sector, he held senior leadership roles at major multinational corporations, including CEO for North Asia & Greater China at Inchcape. He has also worked at Coca-Cola and Procter & Gamble, leading various brand and market development initiatives across Asia and North America.</p>
+                <p>Beyond business, Mr. Lee actively participates in public service as an honorary fellow of the Asia-Pacific Institute of Business at The Chinese University of Hong Kong and as a member of various committees promoting sustainable development and innovation.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    function showContent(tabId, selectedTab) {
+        const contents = document.querySelectorAll('td');
+        const tabs = document.querySelectorAll('th');
+
+        // Hide all content
+        contents.forEach(content => {
+            content.classList.remove('active');
+        });
+
+        // Show selected content
+        document.getElementById(tabId).classList.add('active');
+
+        // Dim other tabs
+        tabs.forEach(tab => {
+            tab.classList.add('dimmed'); // Add dimmed effect
+        });
+        selectedTab.classList.remove('dimmed'); // Remove dimmed effect from selected tab
+
+        // Move selected tab to the beginning
+        const row = selectedTab.parentNode; // Get the current row
+        const firstTab = row.firstElementChild; // Get the first tab
+
+        // Swap positions
+        row.insertBefore(selectedTab, firstTab);
+    }
+    // Show the first tab by default
+    showContent('aaron', document.querySelector('.blue'));
+</script>
+
 </body>
 </html>
